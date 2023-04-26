@@ -3,12 +3,12 @@
 """
 
 
-def add_list_to_set(_list, _set):
-    """
-    Adds values in a list to a set
-    """
-    for each in _list:
-        _set.add(each)
+# def add_list_to_set(_list, _set):
+#     """
+#     Adds values in a list to a set
+#     """
+#     for each in _list:
+#         _set.add(each)
 
 
 def canUnlockAll(boxes):
@@ -23,7 +23,9 @@ def canUnlockAll(boxes):
         opened_a_box = False
         for i, box in enumerate(boxes):
             if i in keys and box not in opened:
-                add_list_to_set(box, keys)
+                # add_list_to_set(box, keys)
+                for each in box:
+                    keys.add(each)
                 opened.append(box)
                 # print('opened:', opened, end=' ')
                 # print('keys:', keys)
