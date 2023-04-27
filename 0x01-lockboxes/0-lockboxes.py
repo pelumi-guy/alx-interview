@@ -9,19 +9,23 @@ contain keys to the other boxes.
 
 def canUnlockAll(boxes):
     """
-     a method that determines if all the boxes can be opened.
+    A method that determines if all the boxes in a list of boxes can be opened.
 
-    :param boxes:
-    :return: True or False
+    Args:
+        boxes
+
+    Return:
+        True or False
     """
     if not boxes or type(boxes) is not list:
         return False
 
     unlocked = [0]
     for n in unlocked:
+        # print('current unlocked list:', unlocked, end=' ')
+        # print('current n:', n)
         for key in boxes[n]:
             if key not in unlocked and key < len(boxes):
                 unlocked.append(key)
-    if len(unlocked) == len(boxes):
-        return True
-    return False
+
+    return len(unlocked) == len(boxes)
