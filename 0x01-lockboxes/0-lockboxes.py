@@ -16,7 +16,7 @@ def canUnlockAll(boxes):
     """
     A method that determines if all the boxes in a list of boxes can be opened.
     """
-    if len(boxes) == 0:
+    if not boxes or type(boxes) is not list:
         return False
 
     opened_boxes = {0}
