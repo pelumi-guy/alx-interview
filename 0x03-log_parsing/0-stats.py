@@ -6,7 +6,7 @@ from sys import stdin
 
 
 def print_stats(stats: dict, file_size: int) -> None:
-    print("File size: {:d}".format(filesize))
+    print("File size: {:d}".format(file_size))
     for k, v in sorted(stats.items()):
         if v:
             print("{}: {}".format(k, v))
