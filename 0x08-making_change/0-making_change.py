@@ -3,6 +3,7 @@
 0. Change comes from within
 """
 
+
 def makeChange(coins, total):
     """
     Given a pile of coins of different values, determine the fewest number
@@ -27,7 +28,6 @@ def makeChange(coins, total):
                 remainder -= coin
                 count += 1
                 foundCoin = True
-                # print(f'remainder: {remainder}, coin: {coin}, count: {count}')
                 break
         if not foundCoin:
             return -1
