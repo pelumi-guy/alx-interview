@@ -14,8 +14,7 @@ def makeChange(coins, total):
 
     # Arrange coins in descending order
     # total *= 100
-    coins = sorted(coins)
-    coins.reverse()
+    coins = sorted(coins, reverse=True)
     # print('coins:', coins)
 
     remainder = total
