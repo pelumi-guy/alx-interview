@@ -32,7 +32,7 @@ def island_perimeter(grid):
             if side in islandCells:
                 sides -= 1
 
-        if sides != 4:
-            perimeter += sides
+        # if sides != 4:
+        perimeter += sides
 
     return perimeter
