@@ -53,7 +53,6 @@ def backtrack(row):
         cols.remove(col)
         posDiag.remove(row + col)
         negDiag.remove(row - col)
-        # if [row, col] in res:
         res.remove([row, col])
 
 
