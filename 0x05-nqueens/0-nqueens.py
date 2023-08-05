@@ -24,6 +24,7 @@ posDiag = set()  # row + col
 negDiag = set()  # row - col
 
 res = []
+solutions = []
 
 
 def backtrack(row):
@@ -32,8 +33,8 @@ def backtrack(row):
     """
     global res
     if row == n:
-        print(res)
-        res = []
+        # print(res)
+        solutions.append(res.copy())
         return
 
     for col in range(n):
@@ -52,8 +53,11 @@ def backtrack(row):
         cols.remove(col)
         posDiag.remove(row + col)
         negDiag.remove(row - col)
-        if [row, col] in res:
-            res.remove([row, col])
+        # if [row, col] in res:
+        res.remove([row, col])
 
 
 backtrack(0)
+
+for solution in solutions:
+    print(solution)
